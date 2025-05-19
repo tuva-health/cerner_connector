@@ -1,8 +1,25 @@
 version: 2
 
-#sources:
-#  - name:
-#    database:
-#    schema:
-#    tables:
-#      - name:
+sources:
+ - name: cerner
+   database: cerner_raw
+   schema: raw_data
+   tables:
+     - name: address
+     - name: clinical_event
+     - name: code_value
+     - name: diagnosis
+     - name: encounter
+     - name: interface_charge
+     - name: nomenclature
+     - name: order_action
+     - name: order_catalog
+     - name: order_dispense
+     - name: order_product
+     - name: orders
+     - name: org_type_reltn
+     - name: organization
+     - name: person_patient
+     - name: person_prsnl
+     - name: person
+     - name: v500_event_code
