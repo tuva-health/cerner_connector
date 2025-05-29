@@ -678,7 +678,7 @@ models:
         - unique:
             tags: ['tuva_dqi_sev_1', 'dqi']
 ### staging
-  - name: address
+  - name: stg_cerner_address
     columns:
       - name: address_id
         tests:
@@ -686,7 +686,7 @@ models:
             tags: ['tuva_dqi_sev_1', 'dqi']
         - unique:
             tags: ['tuva_dqi_sev_1', 'dqi']
-  - name: clinical_event
+  - name: stg_cerner_clinical_event
     columns:
       - name: clinical_event_id
         tests:
@@ -694,8 +694,8 @@ models:
             tags: ['tuva_dqi_sev_1', 'dqi']
         - unique:
             tags: ['tuva_dqi_sev_1', 'dqi']
-  - name: code_value
-  - name: diagnosis
+  - name: stg_cerner_code_value
+  - name: stg_cerner_diagnosis
     columns:
       - name: diagnosis_id
         tests:
@@ -703,7 +703,7 @@ models:
             tags: ['tuva_dqi_sev_1', 'dqi']
         - unique:
             tags: ['tuva_dqi_sev_1', 'dqi']
-  - name: encounter
+  - name: stg_cerner_encounter
     columns:
       - name: encounter_id
         tests:
@@ -711,15 +711,7 @@ models:
             tags: ['tuva_dqi_sev_1', 'dqi']
         - unique:
             tags: ['tuva_dqi_sev_1', 'dqi']
-  - name: interface_charge
-    columns:
-      - name: interface_charge_id
-        tests:
-        - not_null:
-            tags: ['tuva_dqi_sev_1', 'dqi']
-        - unique:
-            tags: ['tuva_dqi_sev_1', 'dqi']
-  - name: nomenclature
+  - name: stg_cerner_nomenclature
     columns:
       - name: nomenclature_id
         tests:
@@ -727,7 +719,7 @@ models:
             tags: ['tuva_dqi_sev_1', 'dqi']
         - unique:
             tags: ['tuva_dqi_sev_1', 'dqi']
-  - name: order_action
+  - name: stg_cerner_order_action
     columns:
       - name: order_action_id
         tests:
@@ -735,9 +727,9 @@ models:
             tags: ['tuva_dqi_sev_1', 'dqi']
         - unique:
             tags: ['tuva_dqi_sev_1', 'dqi']
-  - name: order_catalog
-  - name: order_dispense
-  - name: order_product
+  - name: stg_cerner_order_catalog
+  - name: stg_cerner_order_dispense
+  - name: stg_cerner_order_product
     columns:
       - name: product_seq
         tests:
@@ -745,7 +737,7 @@ models:
             tags: ['tuva_dqi_sev_1', 'dqi']
         - unique:
             tags: ['tuva_dqi_sev_1', 'dqi']
-  - name: orders
+  - name: stg_cerner_orders
     columns:
       - name: order_id
         tests:
@@ -753,8 +745,8 @@ models:
             tags: ['tuva_dqi_sev_1', 'dqi']
         - unique:
             tags: ['tuva_dqi_sev_1', 'dqi']
-  - name: org_type_reln
-  - name: organization
+  - name: stg_cerner_org_type_reln
+  - name: stg_cerner_organization
     columns:
       - name: organization_id
         tests:
@@ -762,7 +754,7 @@ models:
             tags: ['tuva_dqi_sev_1', 'dqi']
         - unique:
             tags: ['tuva_dqi_sev_1', 'dqi']
-  - name: person_patient
+  - name: stg_cerner_person_patient
     columns:
       - name: person_id
         tests:
@@ -770,7 +762,7 @@ models:
             tags: ['tuva_dqi_sev_1', 'dqi']
         - unique:
             tags: ['tuva_dqi_sev_1', 'dqi']
-  - name: person_prsnl
+  - name: stg_cerner_person_prsnl
     columns:
       - name: person_id
         tests:
@@ -778,7 +770,7 @@ models:
             tags: ['tuva_dqi_sev_1', 'dqi']
         - unique:
             tags: ['tuva_dqi_sev_1', 'dqi']
-  - name: person
+  - name: stg_cerner_person
     columns:
       - name: person_id
         tests:
@@ -786,7 +778,7 @@ models:
             tags: ['tuva_dqi_sev_1', 'dqi']
         - unique:
             tags: ['tuva_dqi_sev_1', 'dqi']
-  - name: v500_event_code
+  - name: stg_cerner_v500_event_code
     columns:
       - name: event_cd
         tests:

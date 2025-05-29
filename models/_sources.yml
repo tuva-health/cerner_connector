@@ -10,7 +10,6 @@ sources:
      - name: code_value
      - name: diagnosis
      - name: encounter
-     - name: interface_charge
      - name: nomenclature
      - name: order_action
      - name: order_catalog
