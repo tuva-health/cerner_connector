@@ -1,0 +1,53 @@
+select
+    cast(laterality_cd as {{ dbt.type_int() }}) as laterality_cd
+    , cast(hac_ind as {{ dbt.type_int() }}) as hac_ind
+    , cast(originating_nomenclature_id as {{ dbt.type_int() }}) as originating_nomenclature_id
+    , cast(last_utc_ts as {{ dbt.type_timestamp() }}) as last_utc_ts
+    , cast(diagnosis_id as {{ dbt.type_int() }}) as diagnosis_id
+    , cast(updt_cnt as {{ dbt.type_int() }}) as updt_cnt
+    , cast(updt_dt_tm as {{ dbt.type_timestamp() }}) as updt_dt_tm
+    , cast(updt_id as {{ dbt.type_int() }}) as updt_id
+    , cast(updt_task as {{ dbt.type_int() }}) as updt_task
+    , cast(updt_applctx as {{ dbt.type_int() }}) as updt_applctx
+    , cast(active_ind as {{ dbt.type_int() }}) as active_ind
+    , cast(active_status_cd as {{ dbt.type_int() }}) as active_status_cd
+    , cast(active_status_dt_tm as {{ dbt.type_timestamp() }}) as active_status_dt_tm
+    , cast(active_status_prsnl_id as {{ dbt.type_int() }}) as active_status_prsnl_id
+    , cast(beg_effective_dt_tm as {{ dbt.type_timestamp() }}) as beg_effective_dt_tm
+    , cast(end_effective_dt_tm as {{ dbt.type_timestamp() }}) as end_effective_dt_tm
+    , cast(contributor_system_cd as {{ dbt.type_int() }}) as contributor_system_cd
+    , cast(person_id as {{ dbt.type_int() }}) as person_id
+    , cast(encntr_id as {{ dbt.type_int() }}) as encntr_id
+    , cast(nomenclature_id as {{ dbt.type_int() }}) as nomenclature_id
+    , cast(diag_dt_tm as {{ dbt.type_timestamp() }}) as diag_dt_tm
+    , cast(diag_type_cd as {{ dbt.type_int() }}) as diag_type_cd
+    , cast(diagnostic_category_cd as {{ dbt.type_int() }}) as diagnostic_category_cd
+    , cast(diag_priority as {{ dbt.type_int() }}) as diag_priority
+    , cast(diag_prsnl_id as {{ dbt.type_int() }}) as diag_prsnl_id
+    , cast(diag_prsnl_name as {{ dbt.type_string() }}) as diag_prsnl_name
+    , cast(diag_class_cd as {{ dbt.type_int() }}) as diag_class_cd
+    , cast(confid_level_cd as {{ dbt.type_int() }}) as confid_level_cd
+    , cast(attestation_dt_tm as {{ dbt.type_timestamp() }}) as attestation_dt_tm
+    , cast(reference_nbr as {{ dbt.type_string() }}) as reference_nbr
+    , cast(seg_unique_key as {{ dbt.type_string() }}) as seg_unique_key
+    , cast(diag_ftdesc as {{ dbt.type_string() }}) as diag_ftdesc
+    , cast(mod_nomenclature_id as {{ dbt.type_int() }}) as mod_nomenclature_id
+    , cast(svc_cat_hist_id as {{ dbt.type_int() }}) as svc_cat_hist_id
+    , cast(diag_note as {{ dbt.type_string() }}) as diag_note
+    , cast(conditional_qual_cd as {{ dbt.type_int() }}) as conditional_qual_cd
+    , cast(clinical_service_cd as {{ dbt.type_int() }}) as clinical_service_cd
+    , cast(confirmation_status_cd as {{ dbt.type_int() }}) as confirmation_status_cd
+    , cast(classification_cd as {{ dbt.type_int() }}) as classification_cd
+    , cast(severity_class_cd as {{ dbt.type_int() }}) as severity_class_cd
+    , cast(certainty_cd as {{ dbt.type_int() }}) as certainty_cd
+    , cast(probability as {{ dbt.type_int() }}) as probability
+    , cast(diagnosis_display as {{ dbt.type_string() }}) as diagnosis_display
+    , cast(severity_ftdesc as {{ dbt.type_string() }}) as severity_ftdesc
+    , cast(long_blob_id as {{ dbt.type_int() }}) as long_blob_id
+    , cast(ranking_cd as {{ dbt.type_int() }}) as ranking_cd
+    , cast(severity_cd as {{ dbt.type_int() }}) as severity_cd
+    , cast(diagnosis_group as {{ dbt.type_int() }}) as as diagnosis_group
+    , cast(clinical_diag_priority as {{ dbt.type_int() }}) as clinical_diag_priority
+    , cast(encntr_slice_id as {{ dbt.type_int() }}) as encntr_slice_id
+    , cast(present_on_admit_cd as {{ dbt.type_int() }}) as present_on_admit_cd
+from {{ source('cerner_raw', 'diagnosis') }}
